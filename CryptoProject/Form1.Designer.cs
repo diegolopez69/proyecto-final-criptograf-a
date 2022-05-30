@@ -41,22 +41,22 @@ namespace CryptoProject
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtText = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtResultado = new System.Windows.Forms.TextBox();
-            this.btnEncriptar = new System.Windows.Forms.Button();
-            this.btnDesecnriptar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTextoEncriptado = new System.Windows.Forms.TextBox();
-            this.txtDesencriptado = new System.Windows.Forms.TextBox();
+            this.btnImportText = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtDesencriptado = new System.Windows.Forms.TextBox();
+            this.txtTextoEncriptado = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnDesecnriptar = new System.Windows.Forms.Button();
+            this.btnEncriptar = new System.Windows.Forms.Button();
+            this.txtResultado = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cmbAlgoritmos = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.btnImportText = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -204,25 +204,84 @@ namespace CryptoProject
             this.panel2.Size = new System.Drawing.Size(705, 220);
             this.panel2.TabIndex = 10;
             // 
-            // label3
+            // btnImportText
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
-            this.label3.Location = new System.Drawing.Point(5, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Resultado";
+            this.btnImportText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
+            this.btnImportText.Location = new System.Drawing.Point(365, 181);
+            this.btnImportText.Name = "btnImportText";
+            this.btnImportText.Size = new System.Drawing.Size(329, 23);
+            this.btnImportText.TabIndex = 19;
+            this.btnImportText.Text = "Importar Texto";
+            this.btnImportText.UseVisualStyleBackColor = true;
+            this.btnImportText.Click += new System.EventHandler(this.btnImportText_Click);
             // 
-            // txtResultado
+            // btnExport
             // 
-            this.txtResultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(222)))), ((int)(((byte)(233)))));
-            this.txtResultado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtResultado.Location = new System.Drawing.Point(8, 107);
-            this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(329, 19);
-            this.txtResultado.TabIndex = 11;
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
+            this.btnExport.Location = new System.Drawing.Point(8, 182);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(329, 23);
+            this.btnExport.TabIndex = 18;
+            this.btnExport.Text = "Exportar Texto";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
+            this.label5.Location = new System.Drawing.Point(362, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Resultado";
+            // 
+            // txtDesencriptado
+            // 
+            this.txtDesencriptado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(222)))), ((int)(((byte)(233)))));
+            this.txtDesencriptado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDesencriptado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesencriptado.Location = new System.Drawing.Point(365, 106);
+            this.txtDesencriptado.Name = "txtDesencriptado";
+            this.txtDesencriptado.Size = new System.Drawing.Size(329, 19);
+            this.txtDesencriptado.TabIndex = 16;
+            // 
+            // txtTextoEncriptado
+            // 
+            this.txtTextoEncriptado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(222)))), ((int)(((byte)(233)))));
+            this.txtTextoEncriptado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTextoEncriptado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTextoEncriptado.Location = new System.Drawing.Point(365, 43);
+            this.txtTextoEncriptado.Name = "txtTextoEncriptado";
+            this.txtTextoEncriptado.Size = new System.Drawing.Size(329, 19);
+            this.txtTextoEncriptado.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
+            this.label4.Location = new System.Drawing.Point(362, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Texto";
+            // 
+            // btnDesecnriptar
+            // 
+            this.btnDesecnriptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.btnDesecnriptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.btnDesecnriptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesecnriptar.Location = new System.Drawing.Point(365, 152);
+            this.btnDesecnriptar.Name = "btnDesecnriptar";
+            this.btnDesecnriptar.Size = new System.Drawing.Size(329, 23);
+            this.btnDesecnriptar.TabIndex = 13;
+            this.btnDesecnriptar.Text = "Desencriptar";
+            this.btnDesecnriptar.UseVisualStyleBackColor = false;
+            this.btnDesecnriptar.Click += new System.EventHandler(this.btnDesecnriptar_Click);
             // 
             // btnEncriptar
             // 
@@ -238,58 +297,25 @@ namespace CryptoProject
             this.btnEncriptar.UseVisualStyleBackColor = false;
             this.btnEncriptar.Click += new System.EventHandler(this.btnEncriptar_Click);
             // 
-            // btnDesecnriptar
+            // txtResultado
             // 
-            this.btnDesecnriptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.btnDesecnriptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.btnDesecnriptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesecnriptar.Location = new System.Drawing.Point(365, 152);
-            this.btnDesecnriptar.Name = "btnDesecnriptar";
-            this.btnDesecnriptar.Size = new System.Drawing.Size(329, 23);
-            this.btnDesecnriptar.TabIndex = 13;
-            this.btnDesecnriptar.Text = "Desencriptar";
-            this.btnDesecnriptar.UseVisualStyleBackColor = false;
-            this.btnDesecnriptar.Click += new System.EventHandler(this.btnDesecnriptar_Click);
+            this.txtResultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(222)))), ((int)(((byte)(233)))));
+            this.txtResultado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResultado.Location = new System.Drawing.Point(8, 107);
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.Size = new System.Drawing.Size(329, 19);
+            this.txtResultado.TabIndex = 11;
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
-            this.label4.Location = new System.Drawing.Point(362, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Texto";
-            // 
-            // txtTextoEncriptado
-            // 
-            this.txtTextoEncriptado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(222)))), ((int)(((byte)(233)))));
-            this.txtTextoEncriptado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTextoEncriptado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTextoEncriptado.Location = new System.Drawing.Point(365, 43);
-            this.txtTextoEncriptado.Name = "txtTextoEncriptado";
-            this.txtTextoEncriptado.Size = new System.Drawing.Size(329, 19);
-            this.txtTextoEncriptado.TabIndex = 15;
-            // 
-            // txtDesencriptado
-            // 
-            this.txtDesencriptado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(222)))), ((int)(((byte)(233)))));
-            this.txtDesencriptado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDesencriptado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesencriptado.Location = new System.Drawing.Point(365, 106);
-            this.txtDesencriptado.Name = "txtDesencriptado";
-            this.txtDesencriptado.Size = new System.Drawing.Size(329, 19);
-            this.txtDesencriptado.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
-            this.label5.Location = new System.Drawing.Point(362, 86);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Resultado";
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
+            this.label3.Location = new System.Drawing.Point(5, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Resultado";
             // 
             // cmbAlgoritmos
             // 
@@ -322,36 +348,11 @@ namespace CryptoProject
             this.label6.Size = new System.Drawing.Size(151, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "Seleccione el algoritmo:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
-            this.btnExport.Location = new System.Drawing.Point(8, 182);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(329, 23);
-            this.btnExport.TabIndex = 18;
-            this.btnExport.Text = "Exportar Texto";
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // btnImportText
-            // 
-            this.btnImportText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
-            this.btnImportText.Location = new System.Drawing.Point(365, 181);
-            this.btnImportText.Name = "btnImportText";
-            this.btnImportText.Size = new System.Drawing.Size(329, 23);
-            this.btnImportText.TabIndex = 19;
-            this.btnImportText.Text = "Importar Texto";
-            this.btnImportText.UseVisualStyleBackColor = true;
-            this.btnImportText.Click += new System.EventHandler(this.btnImportText_Click);
             // 
             // panel3
             // 
@@ -362,6 +363,16 @@ namespace CryptoProject
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(786, 28);
             this.panel3.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
+            this.label7.Location = new System.Drawing.Point(15, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(206, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Sistema de encriptacion y desencriptacion";
             // 
             // button1
             // 
@@ -375,16 +386,6 @@ namespace CryptoProject
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
-            this.label7.Location = new System.Drawing.Point(15, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(206, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Sistema de encriptacion y desencriptacion";
             // 
             // Form1
             // 

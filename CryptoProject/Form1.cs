@@ -141,7 +141,7 @@ namespace CryptoProject
             }
             else
             {
-                MessageBox.Show("No se pueden exportan llaves vacias");
+                MessageBox.Show("No se pueden exportan llaves vacíassss");
             }
         }
 
@@ -234,6 +234,11 @@ namespace CryptoProject
         private void button1_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
