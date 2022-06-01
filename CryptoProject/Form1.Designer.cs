@@ -51,12 +51,12 @@ namespace CryptoProject
             this.btnEncriptar = new System.Windows.Forms.Button();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbAlgoritmos = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmbAlgoritmos = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -108,6 +108,7 @@ namespace CryptoProject
             this.txtClavePublica.Size = new System.Drawing.Size(329, 96);
             this.txtClavePublica.TabIndex = 3;
             this.txtClavePublica.Text = "";
+            this.txtClavePublica.TextChanged += new System.EventHandler(this.txtClavePublica_TextChanged);
             // 
             // label1
             // 
@@ -317,26 +318,6 @@ namespace CryptoProject
             this.label3.TabIndex = 10;
             this.label3.Text = "Resultado";
             // 
-            // cmbAlgoritmos
-            // 
-            this.cmbAlgoritmos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.cmbAlgoritmos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cmbAlgoritmos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAlgoritmos.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAlgoritmos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
-            this.cmbAlgoritmos.FormattingEnabled = true;
-            this.cmbAlgoritmos.IntegralHeight = false;
-            this.cmbAlgoritmos.ItemHeight = 20;
-            this.cmbAlgoritmos.Items.AddRange(new object[] {
-            "TDES",
-            "RSA"});
-            this.cmbAlgoritmos.Location = new System.Drawing.Point(536, 44);
-            this.cmbAlgoritmos.Name = "cmbAlgoritmos";
-            this.cmbAlgoritmos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbAlgoritmos.Size = new System.Drawing.Size(203, 26);
-            this.cmbAlgoritmos.TabIndex = 11;
-            this.cmbAlgoritmos.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cmbAlgoritmos_DrawItem);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -387,17 +368,29 @@ namespace CryptoProject
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cmbAlgoritmos
+            // 
+            this.cmbAlgoritmos.FormattingEnabled = true;
+            this.cmbAlgoritmos.Items.AddRange(new object[] {
+            "RSA"});
+            this.cmbAlgoritmos.Location = new System.Drawing.Point(534, 47);
+            this.cmbAlgoritmos.Name = "cmbAlgoritmos";
+            this.cmbAlgoritmos.Size = new System.Drawing.Size(121, 21);
+            this.cmbAlgoritmos.TabIndex = 14;
+            this.cmbAlgoritmos.SelectedIndexChanged += new System.EventHandler(this.cmbAlgoritmos_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(781, 554);
+            this.Controls.Add(this.cmbAlgoritmos);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cmbAlgoritmos);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.DarkGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -436,7 +429,6 @@ namespace CryptoProject
         private System.Windows.Forms.TextBox txtDesencriptado;
         private System.Windows.Forms.TextBox txtTextoEncriptado;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbAlgoritmos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnExport;
@@ -444,6 +436,7 @@ namespace CryptoProject
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbAlgoritmos;
     }
 }
 

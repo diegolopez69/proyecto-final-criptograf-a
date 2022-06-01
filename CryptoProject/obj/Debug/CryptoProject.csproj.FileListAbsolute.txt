@@ -8,3 +8,13 @@ C:\Users\victo\source\repos\CryptoProject\CryptoProject\obj\Debug\CryptoProject.
 C:\Users\victo\source\repos\CryptoProject\CryptoProject\obj\Debug\CryptoProject.csproj.CoreCompileInputs.cache
 C:\Users\victo\source\repos\CryptoProject\CryptoProject\obj\Debug\CryptoProject.exe
 C:\Users\victo\source\repos\CryptoProject\CryptoProject\obj\Debug\CryptoProject.pdb
+C:\Users\diego\OneDrive\Escritorio\456\proyecto-final-criptograf-a\CryptoProject\bin\Debug\CryptoProject.exe.config
+C:\Users\diego\OneDrive\Escritorio\456\proyecto-final-criptograf-a\CryptoProject\bin\Debug\CryptoProject.exe
+C:\Users\diego\OneDrive\Escritorio\456\proyecto-final-criptograf-a\CryptoProject\bin\Debug\CryptoProject.pdb
+C:\Users\diego\OneDrive\Escritorio\456\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.csproj.AssemblyReference.cache
+C:\Users\diego\OneDrive\Escritorio\456\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.Form1.resources
+C:\Users\diego\OneDrive\Escritorio\456\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.Properties.Resources.resources
+C:\Users\diego\OneDrive\Escritorio\456\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.csproj.GenerateResource.cache
+C:\Users\diego\OneDrive\Escritorio\456\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.csproj.CoreCompileInputs.cache
+C:\Users\diego\OneDrive\Escritorio\456\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.exe
+C:\Users\diego\OneDrive\Escritorio\456\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.pdb

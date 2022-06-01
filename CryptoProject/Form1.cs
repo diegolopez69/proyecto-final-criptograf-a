@@ -240,5 +240,15 @@ namespace CryptoProject
         {
 
         }
+
+        private void txtClavePublica_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbAlgoritmos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
