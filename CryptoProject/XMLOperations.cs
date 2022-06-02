@@ -5,36 +5,34 @@ namespace CryptoProject
 {
     class XMLOperations
     {
-        public XmlDocument ImportXML(String path)
+        public XmlDocument ImportXML(String ruta)
         {
-            Console.WriteLine(path);
-
-            XmlDocument doc = new XmlDocument();
-            doc.Load(path);
-            Console.WriteLine(doc.ToString());
-            return doc;
+            Console.WriteLine(ruta);
+            XmlDocument documentoXML = new XmlDocument();
+            documentoXML.Load(ruta);
+            Console.WriteLine(documentoXML.ToString());
+            return documentoXML;
         }
 
-        public String[] GetRSAValues(XmlDocument doc)
+        public String[] GetRSAValues(XmlDocument documentoXML)
         {
-            Console.WriteLine(doc.DocumentElement.OuterXml);
-            String privatePath = "ALGORITMO/clavePrivada";
-            String publicPath = "ALGORITMO/clave";
-            XmlNode nodesPrivate = doc.SelectSingleNode(privatePath);
-            XmlNode nodesPublic = doc.SelectSingleNode(publicPath);
-            XmlDocument newDoc = new XmlDocument();
-            newDoc.LoadXml(nodesPrivate.InnerText);
-            XmlDocument newDoc2 = new XmlDocument();
-            newDoc2.LoadXml(nodesPublic.InnerText);
+            String RutaDeLaLlavePrivada = "ALGORITMO/clavePrivada";
+            String RutaDeLaLlavePublica = "ALGORITMO/clave";
+            XmlNode NodoDeLaLlavePrivada = documentoXML.SelectSingleNode(RutaDeLaLlavePrivada);
+            XmlNode NodoDeLaLlavePublica = documentoXML.SelectSingleNode(RutaDeLaLlavePublica);
+            XmlDocument documentoDeLlavePrivada = new XmlDocument();
+            documentoDeLlavePrivada.LoadXml(NodoDeLaLlavePrivada.InnerText);
+            XmlDocument documentoDeLlavePublica = new XmlDocument();
+            documentoDeLlavePublica.LoadXml(NodoDeLaLlavePublica.InnerText);
 
-            String keysPath = "ALGORITMOKeyValue";
-            XmlNodeList keysnodes = newDoc.SelectNodes(keysPath);
-            XmlNode nodePrivate = newDoc.SelectSingleNode("ALGORITMOKeyValue");
-            XmlNode nodePublic = newDoc2.SelectSingleNode("ALGORITMOKeyValue/Modulus");
-            Console.WriteLine(nodePublic.InnerText);
-            Console.WriteLine(nodePrivate.InnerText);
+            String RutaDeLaLlave = "ALGORITMOKeyValue";
+            XmlNodeList keysnodes = documentoDeLlavePrivada.SelectNodes(RutaDeLaLlave);
+            XmlNode NodoPrivado = documentoDeLlavePrivada.SelectSingleNode("ALGORITMOKeyValue");
+            XmlNode NodoPublico = documentoDeLlavePublica.SelectSingleNode("ALGORITMOKeyValue/Modulus");
+            Console.WriteLine(NodoPublico.InnerText);
+            Console.WriteLine(NodoPrivado.InnerText);
 
-            String[] data = { nodePublic.InnerText, nodePrivate.InnerText, nodesPrivate.InnerText };
+            String[] data = { NodoPublico.InnerText, NodoPrivado.InnerText, NodoDeLaLlavePrivada.InnerText };
             return data;
         }
 
