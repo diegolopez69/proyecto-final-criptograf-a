@@ -17,6 +17,7 @@ namespace CryptoProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            //este es el bueno
         }
     }
 }

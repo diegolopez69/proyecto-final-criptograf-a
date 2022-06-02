@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
 namespace CryptoProject
 {
     class XMLOperations
     {
-        public XmlDocument ImportXML(String path) {
+        public XmlDocument ImportXML(String path)
+        {
             Console.WriteLine(path);
 
             XmlDocument doc = new XmlDocument();
@@ -19,7 +15,6 @@ namespace CryptoProject
             return doc;
         }
 
-        
         public String[] GetRSAValues(XmlDocument doc)
         {
             Console.WriteLine(doc.DocumentElement.OuterXml);
@@ -44,6 +39,6 @@ namespace CryptoProject
             String[] data = { nodePublic.InnerText, nodePrivate.InnerText, nodesPrivate.InnerText };
             return data;
         }
-        
+
     }
 }

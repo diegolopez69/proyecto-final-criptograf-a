@@ -14,13 +14,13 @@ namespace CryptoProject
 {
     public partial class Form1 : Form
     {
-        TDES tdes;
+       
         static String xml = "";
         public Form1()
         {
             InitializeComponent();
         }
-
+        /*
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             if (cmbAlgoritmos.SelectedIndex == 0)
@@ -32,7 +32,7 @@ namespace CryptoProject
             {
                 getRSAkeys();
             }
-        }
+        }*/
 
         public void getRSAkeys() 
         {
@@ -46,14 +46,14 @@ namespace CryptoProject
             txtClavePublica.Text = Convert.ToBase64String(rsaKeyInfo.Modulus);
         }
 
-        public void encriptarRSA() 
+       /* public void encriptarRSA() 
         {
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(1024);
             rsa.FromXmlString(xml);
             byte[] text = Encoding.ASCII.GetBytes(txtText.Text);
             byte[] result = rsa.Encrypt(text, false);
             txtResultado.Text = Convert.ToBase64String(result);
-        }
+        }*/
 
         public void decriptRSA() 
         {
@@ -70,7 +70,7 @@ namespace CryptoProject
 
         }
 
-        private void btnEncriptar_Click(object sender, EventArgs e)
+      /*  private void btnEncriptar_Click(object sender, EventArgs e)
         {   if (String.IsNullOrEmpty(txtText.Text))
             {
                 try
@@ -93,7 +93,7 @@ namespace CryptoProject
             {
                 MessageBox.Show("No se puede encriptar un mensaje vacio");
             }
-        }
+        }*/
 
         private void btnDesecnriptar_Click(object sender, EventArgs e)
         {
@@ -101,8 +101,10 @@ namespace CryptoProject
             {
                 if (cmbAlgoritmos.SelectedIndex == 0)
                 {
+                    decriptRSA();
+                    /*
                     tdes = new TDES();
-                    txtDesencriptado.Text = tdes.decript(txtClave.Text, txtTextoEncriptado.Text);
+                    txtDesencriptado.Text = tdes.decript(txtClave.Text, txtTextoEncriptado.Text);*/
                 }
                 else if (cmbAlgoritmos.SelectedIndex == 1)
                 {
@@ -115,6 +117,7 @@ namespace CryptoProject
             }
         }
 
+        /*
         private void btnExportKeys_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrWhiteSpace(txtClave.Text))
@@ -143,8 +146,10 @@ namespace CryptoProject
             {
                 MessageBox.Show("No se pueden exportan llaves vacíassss");
             }
-        }
+        }*/
 
+
+        /*
         private void btnExport_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrWhiteSpace(txtResultado.Text))
@@ -169,6 +174,7 @@ namespace CryptoProject
                 MessageBox.Show("No se puede exportar texto no encriptado");
             }
         }
+        */
 
         private void btnImportKeys_Click(object sender, EventArgs e)
         {
@@ -180,7 +186,13 @@ namespace CryptoProject
                 Console.WriteLine(save.FileName);
                 if (cmbAlgoritmos.SelectedIndex == 0)
                 {
+                    /*
                    txtClave.Text = import.GetTDESKey(import.ImportXML(save.FileName));
+                    */
+                    String[] data = import.GetRSAValues(import.ImportXML(save.FileName));
+                    xml = data[2];
+                    txtClave.Text = data[1];
+                    txtClavePublica.Text = data[0];
                 }
                 else if (cmbAlgoritmos.SelectedIndex == 1)
                 {
@@ -231,24 +243,6 @@ namespace CryptoProject
             e.Graphics.DrawString(text, ((Control)sender).Font, brush, e.Bounds.X, e.Bounds.Y);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtClavePublica_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbAlgoritmos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
