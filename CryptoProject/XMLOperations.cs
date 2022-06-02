@@ -22,8 +22,6 @@ namespace CryptoProject
             String publicPath = "ALGORITMO/clave";
             XmlNode nodesPrivate = doc.SelectSingleNode(privatePath);
             XmlNode nodesPublic = doc.SelectSingleNode(publicPath);
-            /*Console.WriteLine(nodes.InnerText);*/
-            /*2 ES PUBLICO*/
             XmlDocument newDoc = new XmlDocument();
             newDoc.LoadXml(nodesPrivate.InnerText);
             XmlDocument newDoc2 = new XmlDocument();
