@@ -31,6 +31,7 @@ namespace CryptoProject
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnImportText = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDesencriptado = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@ namespace CryptoProject
             this.txtClave = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,17 @@ namespace CryptoProject
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(964, 314);
             this.panel2.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 15.75F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
+            this.label3.Location = new System.Drawing.Point(30, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 27);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "desencriptado";
             // 
             // btnImportText
             // 
@@ -153,7 +164,7 @@ namespace CryptoProject
             this.cmbAlgoritmos.IntegralHeight = false;
             this.cmbAlgoritmos.ItemHeight = 20;
             this.cmbAlgoritmos.Items.AddRange(new object[] {
-            "TDES",
+            "_ _ _ _ ",
             "RSA"});
             this.cmbAlgoritmos.Location = new System.Drawing.Point(754, 118);
             this.cmbAlgoritmos.Name = "cmbAlgoritmos";
@@ -267,17 +278,6 @@ namespace CryptoProject
             this.label2.TabIndex = 13;
             this.label2.Text = "Lucha contra rusia";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 15.75F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
-            this.label3.Location = new System.Drawing.Point(30, 202);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 27);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "desencriptado";
             // 
             // Form1
             // 

@@ -30,3 +30,7 @@ C:\Users\developer\Desktop\proyecto-final-criptograf-a\CryptoProject\obj\Debug\C
 C:\Users\developer\Desktop\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.csproj.CoreCompileInputs.cache
 C:\Users\developer\Desktop\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.exe
 C:\Users\developer\Desktop\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.pdb
+C:\Users\developer\Desktop\proyecto-final-criptograf-a\CryptoProject\bin\Debug\CryptoProject.exe.manifest
+C:\Users\developer\Desktop\proyecto-final-criptograf-a\CryptoProject\bin\Debug\CryptoProject.application
+C:\Users\developer\Desktop\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.exe.manifest
+C:\Users\developer\Desktop\proyecto-final-criptograf-a\CryptoProject\obj\Debug\CryptoProject.application
